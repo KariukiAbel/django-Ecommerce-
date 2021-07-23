@@ -1,0 +1,7 @@
+{% block content %}
+<h1>Log in</h1>
+<form action="{% url 'accounts:login'%}" method="POST">
+    {{form}}
+    <input type="submit">
+</form>
+{% endblock %}
