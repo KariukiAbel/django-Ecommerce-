@@ -9,6 +9,16 @@
 </head>
 
 <body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="{% url 'products:home' %}">Home</a>
+                </li>
+                <li></li>
+            </ul>
+        </div>
+    </nav>
     <div class="wrapper">
         {% block content %} {% endblock %}
     </div>
