@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def signup_view(request):
-    return HttpResponse(request, 'signup.html')
+    return render(request, 'accounts/login.html')
 
-def login():
-    
+def login_view():
+    pass
