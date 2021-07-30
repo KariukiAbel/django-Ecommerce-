@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Log in</h2>
+            <form action="{% url 'accounts:login'%}" method="POST">{% csrf_token %}
+                <label for="Username">Username or Email</label>
+                <input type="text/email" name="uname">
+                <label for="Password">Password</label>
+                <input type="password" name="password">
+                <input type="submit" name="submit">
+            </form>
+        </div>
+    </div>
+</div>
