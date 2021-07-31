@@ -1,3 +1,6 @@
+{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +8,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/css/bootstrap.min.css'%">
+    <link rel="stylesheet" href="{% static 'bootstrap-4.3.1-dist/js/bootstrap.min.js'%}">
     <title></title>
 </head>
 
 <body>
     <nav>
-        <div class="container">
+        <div class="container-fluid">
             <ul>
                 <li>
                     <a href="{% url 'products:index' %}">Home</a>
@@ -19,11 +24,14 @@
                     <a href=""></a>
                 </li>
             </ul>
+            <ul class="nav navbar-nav navbar-right "></ul>
         </div>
     </nav>
     <div class="wrapper">
         {% block content %} {% endblock %}
     </div>
 </body>
+
+</html>
 
 </html>
