@@ -11,3 +11,6 @@ def login_view(request):
     if request.method == "POST":
         return render(request, "products/products.html")
     return render(request, 'accounts/login.html')
+
+def reset_password(request):
+    return render(request, 'accounts/resetpassword.html')

@@ -1,4 +1,16 @@
-{% extends 'accounts/base_layout.html'%} {% block content %}
-<div class="card">
-    <h2>Product display page</h2>
-</div>{% endblock %}
+{% extends 'base_layout.html'%} {% block content %}
+<div class="card mb-2">
+    <figure class="itemside">
+        <div class="aside">
+            <div class="img-wrap img-sm border-right"><img src="https://via.placeholder.com/150" width="100%" height="100px"></div>
+        </div>
+        <figcaption class="p-3">
+            <h6 class="title"><a href="#">Some name of related item goes here</a></h6>
+            <div class="price-wrap">
+                <span class="price-new b">$1280</span>
+                <del class="price-old text-muted">$1980</del>
+            </div>
+        </figcaption>
+    </figure>
+</div>
+{% endblock %}
