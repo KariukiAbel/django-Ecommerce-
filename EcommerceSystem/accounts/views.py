@@ -70,4 +70,6 @@ def reset_password(request):
                 [user_mail],
                 fail_silently=False,
             )
+            render(request, 'accounts/login.html')
+        else:
             pass
