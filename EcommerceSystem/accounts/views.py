@@ -66,7 +66,7 @@ def reset_password(request):
             send_mail(
                 'Change in password',
                 'Your new password is '+relative_password+" use it to log in then you can change to your prefered password",
-                'noreply@django-ecom.com',
+                'noreply@django-nabesh.com',
                 [user_mail],
                 fail_silently=False,
             )
