@@ -59,6 +59,7 @@ def reset_password(request):
     render(request, 'accounts/resetpassword.html')
     if request.method == "POST":
         user_mail = request.POST.get('usermail')
+        db_mail_entered = users.objects.get('email')
         if user_mail == db_mail_entered:
             relative_password = random_code()
             #update password to relative_password in db
