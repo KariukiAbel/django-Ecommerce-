@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Users(models.Model):
+class User(models.Model):
     first_name = models.CharField(max_length = 255)
     last_name = models.CharField(max_length = 255)
     email = models.EmailField(max_length = 255)
@@ -9,3 +9,4 @@ class Users(models.Model):
     address = models.CharField(max_length = 255)
     town = models.CharField(max_length = 255)
     date_registered = models.DateField(auto_now_add = True)
+    user_type = models.IntegerField(default = 2);
