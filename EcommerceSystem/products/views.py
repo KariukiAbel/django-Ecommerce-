@@ -7,4 +7,4 @@ def index_view(request):
 
 def product_details_view(request):
     # context = {}
-    return(request, 'products/details.html')
+    return render(request, 'products/details.html')
