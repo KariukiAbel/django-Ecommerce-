@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 import random
 import array
+from .models import User
 
 # Create your views here.
 def random_code():
@@ -40,6 +41,9 @@ def signup_view(request):
         confirm_password = request.POST.get('confirm_password')
         if password == confirm_password:
             #Enter the details to the db
+            details = User(first_name=first_name, last_name=last_name, email=email,
+                           phone_number=phone_number, address=address, town=town, password=password)
+            details.save()
             return render(request,"products/products.html")
         else:
             error_msg = "Passwords do not match!!"
@@ -59,7 +63,7 @@ def reset_password(request):
     render(request, 'accounts/resetpassword.html')
     if request.method == "POST":
         user_mail = request.POST.get('usermail')
-        db_mail_entered = users.objects.get('email')
+        db_mail_entered = User.objects.get('email')
         if user_mail == db_mail_entered:
             relative_password = random_code()
             #update password to relative_password in db
