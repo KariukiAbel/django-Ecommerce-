@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.core.mail import send_mail
+from django.contrib.auth.models import User, auth
+from django.contrib import messages
 import random
 import array
-from .models import User
 
 # Create your views here.
 def random_code():
@@ -41,7 +42,7 @@ def signup_view(request):
         confirm_password = request.POST.get('confirm_password')
         if password == confirm_password:
             #Enter the details to the db
-            details = User(first_name=first_name, last_name=last_name, email=email,
+            details = User.objects.create_user(username=first_name ,first_name=first_name, last_name=last_name, email=email,
                            phone_number=phone_number, address=address, town=town, password=password)
             details.save()
             return render(request,"products/products.html")
@@ -54,8 +55,10 @@ def login_view(request):
     if request.method == "POST":
         user_mail = request.POST.get('uname')
         password_entered = request.POST.get('password')
-        print(user_mail)
-        print(password_entered)
+        try:
+            users = User.objects.get(email= user_mail , password=password_entered);  
+        except:
+            pass   
         return render(request, "products/products.html")
     return render(request, 'accounts/login.html')
 
