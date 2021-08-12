@@ -11,8 +11,11 @@
             </div>
             <div class="row">
                 <div class="col-sm6">
-                    <label for="name">Product Name:</label>
-                    <label for="db_name">some name to go here later</label>
+                {% block content%}
+                    <label for="name">{{product.name}}</label>
+                    <label for="db_name">{{product.description}}</label>
+                    <label for="db_name">Ksh: {{product.price}}</label>
+                    {% endblock %}
                 </div>
             </div>
         </div>
