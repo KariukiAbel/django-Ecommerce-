@@ -6,3 +6,6 @@ from products.models import Product
 def product_view(request):
     supplier_products = Product.objects.all()
     return render(request, 'suppliers/index.html', {'products': supplier_products})
+
+def add_product_view(request):
+    return render(request, 'suppliers/add_product.html')

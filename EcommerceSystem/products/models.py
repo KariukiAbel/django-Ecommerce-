@@ -10,6 +10,7 @@ class Product(models.Model):
     price = models.FloatField(max_length=100)
     category = models.CharField(max_length=100)
     added_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    in_store = models.BooleanField(default="True")
     
     
     def __str__(self):

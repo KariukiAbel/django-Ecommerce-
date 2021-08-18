@@ -1,76 +1,77 @@
-    .card {
-    width: 300px;
-    height: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 350px;
-    max-height: 450px;
-    margin: 10px;
-    text-align: center;
-    font-family: arial;
-    float: left;
-}
-
-.cards: hover {}
-
-.price {
-    color: grey;
-    font-size: 22px;
-    float: left;
-}
-
-.card button {
-    float: right;
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 50%;
-    font-size: 18px;
-}
-
-.card button:hover {
-    opacity: 0.7;
-}
-
-.dropdown-menu {
-    border: none;
-}
-
-.dropdown-toggle {
-    border: none;
-    background: none;
-}
-
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-@media (min-width: 34rem) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
-    .card {
-        height: 350px;
-        background-color: #f8f9fa;
-    }
-    .card-columns {
-        border: none;
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
-        column-count: 3;
-    }
-    .card-image-top {
-        height: 70px;
-        width: 70px;
-    }
-    .card-title {
-        color: #073d8d;
-    }
+        .card {
+            width: 300px;
+            height: 400px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            max-height: 450px;
+            margin: 10px;
+            text-align: center;
+            font-family: arial;
+            float: left;
+        }
+        
+        .card: hover {}
+        
+        .price {
+            color: grey;
+            font-size: 22px;
+            float: left;
+        }
+        
+        .card button {
+            float: right;
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 50%;
+            font-size: 18px;
+        }
+        
+        .card button:hover {
+            opacity: 0.7;
+        }
+        
+        .dropdown-menu {
+            border: none;
+        }
+        
+        .dropdown-toggle {
+            border: none;
+            background: none;
+        }
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 34rem) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+            .card {
+                height: 350px;
+                background-color: #f8f9fa;
+            }
+            .card-columns {
+                border: none;
+                -webkit-column-count: 3;
+                -moz-column-count: 3;
+                column-count: 3;
+            }
+            .card-image-top {
+                height: 70px;
+                width: 70px;
+            }
+            .card-title {
+                color: #073d8d;
+            }
+        }

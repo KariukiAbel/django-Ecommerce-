@@ -19,9 +19,9 @@
 {% for product in products%}
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">{{product.name}}</h5>
-                    <div><img class="card-img-top" src="https://via.placeholder.com/150" alt="Card image cap">
+                    <div><img class="card-img-top" src={% media 'imageURL' %} alt="Card image cap">
                     </div>
+                    <h5 class="card-title">{{product.name}}</h5>
                     <div>
                         <p>{{product.description}}</p>
                     </div>
@@ -29,7 +29,8 @@
                 <div class="card-footer">
                     <big class="text-muted">Ksh {{product.price}}</big>
                     {% comment %} <button class="btn btn-outline-primary" href='/{{product.id}}'>Add to cart</button> {% endcomment %}
-<a href='/{{product.id}}' class="btn btn-outline-primary">Add to cart</a>
+<a href='/{{product.id}}' class="btn btn-outline-success">View</a>
+<a href='/{{product.id}}' class="btn btn-outline-secondary">Add to cart</a>
                     </div>
             </div>
             {% endfor %}
