@@ -7,40 +7,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'bootstrap.min.css'%}">
-    <script src="{% static 'bootstrap.min.js%'%}"></script>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'bootstrap/js/bootstrap.js'%}">
     <link rel="stylesheet" href="{% static 'styles.css'%}">
+    
     <title></title>
 </head>
 
 <body>
- {% comment %} custom navbar {% endcomment %}
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{% url 'products:index'%}">Econ</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="{% url 'products:index'%}">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="{% url 'cart:cart' %}"><span class="glyphicon glyphicon-user"></span> Cart</a></li>
-      <li><a href="{% url 'accounts:login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-
-     <div class="wrapper ">
-        <div class="container">{% block content %} 
-        
-        {% endblock %}</div>
-    </div>
-    <footer>
+    {% comment %} custom navbar {% endcomment %}
+    <nav class="navbar navbar-inverse">
         <div class="container-fluid">
-            <div class="row footer-row">
-                <div class="col-sm-4"><p>our partners</p></div>
-                <div class="col-sm-4"><p>anything goes here</p></div>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'products:index'%}">Econ</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{% url 'products:index'%}">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'cart:cart' %}"><span class="glyphicon glyphicon-user"></span> Cart</a></li>
+                <li><a href="{% url 'accounts:login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wrapper ">
+        <div class="container">{% block content %} {% endblock %}</div>
+    </div>
+    <br><br>
+    <footer>
+        <div class="container-fluid footer-container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <p>our partners</p>
+                </div>
+                <div class="col-sm-4">
+                    <p>anything goes here</p>
+                </div>
                 <div class="col-sm-4">
                     <p>Contacts</p>
                 </div>

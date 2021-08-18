@@ -89,9 +89,32 @@
 }
 
 .col-md-4 {
-    border-style: solid 1px;
+    border-style: 1px solid rgb(24, 23, 23);
 }
 
-.footer-row {
+.col-md-4 p {
+    text-decoration-color: #ececec;
+}
+
+.footer-container {
     background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+.cart-row {
+    display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+}
+
+.row-imae {
+    width: 100%;
+}
+
+.quantity {
+    display: inline-block;
+    font-weight: 700;
+    padding-right: 10px;
 }
