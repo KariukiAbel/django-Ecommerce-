@@ -6,4 +6,5 @@ def cart_view(request):
     return render(request, 'cart/index.html')
 
 def checkout_view(request):
-    return render(request, 'cart/checkout.html')
+    context = {}
+    return render(request, 'cart/checkout.html', context)
