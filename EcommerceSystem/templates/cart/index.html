@@ -1,0 +1,30 @@
+{% extends 'base_layout.html' %} {% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="box-element">
+            <a class="btn btn-outline-dark" href="{% url 'products:index'%}">&#x2190; Continue Shopping</a>
+            <br>
+            <br>
+            <table class="table">
+                <tr>
+                    <th>
+                        <h5>Items: <strong>3</strong></h5>
+                    </th>
+                    <th>
+                        <h5>Total: <strong>$42</strong></h5>
+                    </th>
+                    <th>
+                        <a class="btn btn-outline-success checkout" href="{% url 'checkout'%}">Checkout</a>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="box-element">
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
