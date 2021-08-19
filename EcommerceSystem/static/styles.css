@@ -89,12 +89,13 @@
     margin: 5px;
 }
 
-.col-md-4 {
-    border: 1px solid #00dba0;
-}
-
 .col-md-4 p {
     text-decoration-color: #ececec;
+}
+
+.card-footer big a {
+    display: inline-block;
+    text-align: left;
 }
 
 .footer-container {
@@ -127,4 +128,13 @@ nav {
 nav li {
     display: inline-block;
     margin-left: 20px;
+}
+
+.price {
+    text-align: left;
+}
+
+.csv .excel .pdf {
+    display: flex;
+    align-items: flex-stretch;
 }

@@ -45,7 +45,7 @@ def signup_view(request):
             details = User.objects.create_user(username=first_name ,first_name=first_name, last_name=last_name, email=email,
                            phone_number=phone_number, address=address, town=town, password=password)
             details.save()
-            return render(request,"products/products.html")
+            return render(request,"products/index.html")
         else:
             error_msg = "Passwords do not match!!"
             
@@ -59,7 +59,7 @@ def login_view(request):
             users = User.objects.get(email= user_mail , password=password_entered);  
         except:
             pass   
-        return render(request, "products/products.html")
+        return render(request, "products/index.html")
     return render(request, 'accounts/login.html')
 
 def reset_password(request):
