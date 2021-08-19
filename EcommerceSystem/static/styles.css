@@ -73,6 +73,7 @@
     }
     .card-title {
         color: #073d8d;
+        text-align: left;
     }
 }
 
@@ -89,7 +90,7 @@
 }
 
 .col-md-4 {
-    border-style: 1px solid rgb(24, 23, 23);
+    border: 1px solid #00dba0;
 }
 
 .col-md-4 p {
@@ -109,7 +110,7 @@
     border-bottom: 1px solid #ececec;
 }
 
-.row-imae {
+.row-image {
     width: 100%;
 }
 
@@ -117,4 +118,13 @@
     display: inline-block;
     font-weight: 700;
     padding-right: 10px;
+}
+
+nav {
+    background-color: #00dba0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
 }
