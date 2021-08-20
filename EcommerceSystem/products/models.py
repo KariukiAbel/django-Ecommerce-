@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from suppliers.models import supplier_details
 
 # Create your models here.
 class Product(models.Model):
@@ -21,6 +22,7 @@ class Product_description(models.Model):
     description = models.TextField(max_length=255)
     quantity = models.IntegerField()
     product_id = models.OneToOneField(Product, on_delete=models.CASCADE)
+    supplier_id = models.OneToOneField(supplier_details, on_delete=models.CASCADE)
     
     
     def __str__(self):
