@@ -8,5 +8,5 @@ def index_view(request):
     return render(request, 'products/index.html', {'products':products})
 
 def product_details_view(request, pk):
-    product = Product.objects.get(id=pk)
+    product = Product.objects.get(pk=id)
     return render(request, 'products/details.html', {'product': product})
