@@ -12,7 +12,7 @@ class Product(models.Model):
     
     
     def __str__(self):
-        return f"{self.name}"
+        return self.name
     
     
 class Product_description(models.Model):
@@ -21,9 +21,9 @@ class Product_description(models.Model):
     unit_description = models.CharField(max_length= 100)
     description = models.TextField(max_length=255)
     quantity = models.IntegerField()
-    product_id = models.OneToOneField(Product, on_delete=models.CASCADE)
-    supplier_id = models.OneToOneField(supplier_details, on_delete=models.CASCADE)
+    product = models.OneToOneField(Product, on_delete=models.CASCADE)
+    supplier = models.ForeignKey(supplier_details, on_delete=models.CASCADE)
     
     
     def __str__(self):
-        return f'{self.description}'
+        return self.description
