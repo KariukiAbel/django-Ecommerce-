@@ -138,3 +138,13 @@ nav li {
     display: flex;
     align-items: flex-stretch;
 }
+
+.form-field {
+    width: 250px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.hidden {
+    display: none!important;
+}

@@ -1,1 +1,73 @@
-<h5>checkout page</h5>
+{% extends 'base_layout.html' %} {% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="box-element" id="form-wrapper">
+            <form action="" id="form">
+                <div id="user-info">
+                    <div class="form-field">
+                        <input type="text" required class="form-control" name="name" placeholder="Name..">
+                    </div>
+                    <div class="form-field">
+                        <input type="email" required class="form-control" name="email" placeholder="Email..">
+                    </div>
+                </div>
+
+                <div id="shipping-info">
+                    <hr>
+                    <p>Shipping Information</p>
+                    <hr>
+                    <div class="form-field">
+                        <input type="text" required class="form-control" name="address" placeholder="Address..">
+                    </div>
+                    <div class="form-field">
+                        <input type="text" required class="form-control" name="city" placeholder="City..">
+                    </div>
+                    <div class="form-field">
+                        <input type="text" required class="form-control" name="state" placeholder="State..">
+                    </div>
+                    <div class="form-field">
+                        <input type="text" required class="form-control" name="zipcode" placeholder="Zip code..">
+                    </div>
+                    <div class="form-field">
+                        <input type="text" required class="form-control" name="country" placeholder="Name..">
+                    </div>
+                </div>
+
+                <hr>
+                <input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
+            </form>
+
+        </div>
+        <br>
+        <div class="box-element hidden" id="payment-info">
+            <small>Paypal Options</small>
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+        <div class="box-element">
+            <a class="btn btn-outline-dark" href="{% url 'cart:cart' %}">&#x2190; Back to Cart</a>
+            <hr>
+            <h3>Order Summary</h3>
+            <hr>
+
+            <div class="cart-row">
+                <div style="flex: 2;"><img class="row-image" src="" alt=""></div>
+                <div style="flex: 2;">
+                    <p>Product1</p>
+                </div>
+                <div style="flex: 1;">
+                    <p>$20.00</p>
+                </div>
+                <div style="flex: 1;">
+                    <p>x2</p>
+                </div>
+            </div>
+            <h5>Items: 2</h5>
+            <h5>Total: $40.00</h5>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
