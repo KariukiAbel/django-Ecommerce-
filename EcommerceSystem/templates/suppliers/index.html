@@ -91,12 +91,24 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6"></div>
-                            <div class="col-md-6"></div>
+                            <div class="col-md-6"> <label for="desription">Description</label>
+                                <textarea type="text" placeholder="Enter a simple description like colour, mass of the product" name="description" required>
+                            </div>
+                            <div class="col-md-6"><label for="quantity">Quantity</label><input type="number" placeholder="Number of the product" name="quantity" required>
+                            </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6"></div>
-                            <div class="col-md-6"></div>
+                            <div class="col-md-6"> <label for="image">Image of the product</label><input type="file" placeholder="Upload image of the product" name="image" required>
+                            </div>
+                            <div class="col-md-6"><label for="category">Category</label><input list="categories" placeholder="Select a category" name="category" required>
+                                <datalist id="categories">
+                                    <option value="Kitchenware">
+                                    <option value="Toiletries">
+                                    <option value="Clothes">
+                                    <option value="Accessories">
+                                    <option value="Electronics">
+                                  </datalist>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6"></div>
