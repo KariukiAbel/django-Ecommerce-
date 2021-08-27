@@ -9,4 +9,4 @@ class supplier_details(models.Model):
     
     
     def __str__(self):
-        return f"{self.supplier_name}"
+        return self.supplier_name

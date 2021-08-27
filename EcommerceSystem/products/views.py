@@ -5,6 +5,7 @@ from .models import *
 # Create your views here.
 def index_view(request):
     products = Product.objects.all()
+    # products.product_description_set.all()
     return render(request, 'products/index.html', {'products':products})
 
 def product_details_view(request, pk):
