@@ -1,14 +1,28 @@
 {% extends 'base_layout.html'%} {% block content %}
+<br><br>
 <div class="row">
+    <div class="col-md-8 offset-2 col-sm-12">
+        <form action="{% url 'products:search'%}" method="GET">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search by your product name, brand or description" id="search">
+                <div class="input-group-append">
+                    <span class="btn btn-outline-dark" id="search-btn">Search</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br><br>
+<div class="row ">
     {% for product in products %}
-    <div class="col-md-4">
-        <img class="thumbnail" src="{{product.image.url}}" alt="">
-        <div class="box-element product">
+    <div class="col-md-4 ">
+        <img class="thumbnail " src="{{product.image.url}} " alt=" ">
+        <div class="box-element product ">
             <h6><strong>{{product.name}}</strong></h6>
             <hr>
-            <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
-            <a class="btn btn-outline-success" href="#">View</a>
-            <h4 style="display: inline-block;float:right;">Ksh:{{product.price|floatformat:2}}</h4>
+            <button class="btn btn-outline-secondary add-btn ">Add to Cart</button>
+            <a class="btn btn-outline-success " href="# ">View</a>
+            <h4 style="display: inline-block;float:right; ">Ksh:{{product.price|floatformat:2}}</h4>
         </div>
     </div>
     {% endfor %}

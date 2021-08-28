@@ -73,11 +73,11 @@ def reset_password(request):
             #send relative_password to the email of the user
             send_mail(
                 'Change in password',
-                'Your new password is '+relative_password+" use it to log in then you can change to your prefered password",
+                'Your new password is '+relative_password+" use it to log in then you can change to your prefferred password",
                 'noreply@django-nabesh.com',
                 [user_mail],
                 fail_silently=False,
             )
             render(request, 'accounts/login.html')
-        else:
-            pass
+        
+        render(request, 'accounts/signup.html')

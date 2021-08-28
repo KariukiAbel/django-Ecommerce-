@@ -148,3 +148,11 @@ nav li {
 .hidden {
     display: none!important;
 }
+
+#search {
+    width: 75%;
+}
+
+#search #search-btn {
+    display: inline-block;
+}
