@@ -15,15 +15,32 @@ class Product(models.Model):
         return self.name
     
     
+        
+class Unit(models.Model):
+    unit_name = models.CharField(max_length =100)
+    
+    def __str__(self):
+        return self.unit_name
+    
+class Category(models.Model):
+    category_name = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.category_name
+    
+    
 class Product_description(models.Model):
     image = models.ImageField()
-    category = models.CharField(max_length=100)
-    unit_description = models.CharField(max_length= 100)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, blank=True)
+    unit_description = models.ForeignKey(Unit, on_delete=models.SET_Null, blank=True)
     description = models.TextField(max_length=255)
     quantity = models.IntegerField()
     product = models.OneToOneField(Product, on_delete=models.CASCADE)
     supplier = models.ForeignKey(supplier_details, on_delete=models.CASCADE)
-    
+        
     
     def __str__(self):
         return self.description
+    
+
+    
