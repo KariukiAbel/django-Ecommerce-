@@ -156,3 +156,8 @@ nav li {
 #search #search-btn {
     display: inline-block;
 }
+
+#price-h4 {
+    display: inline-block;
+    float: right;
+}
