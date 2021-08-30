@@ -31,8 +31,8 @@ class Category(models.Model):
     
 class Product_description(models.Model):
     image = models.ImageField()
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, blank=True)
-    unit_description = models.ForeignKey(Unit, on_delete=models.SET_Null, blank=True)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, blank=True, null=True)
+    unit_description = models.ForeignKey(Unit, on_delete=models.SET_NULL, blank=True, null =True)
     description = models.TextField(max_length=255)
     quantity = models.IntegerField()
     product = models.OneToOneField(Product, on_delete=models.CASCADE)
