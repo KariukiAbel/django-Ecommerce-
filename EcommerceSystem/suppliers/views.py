@@ -8,4 +8,4 @@ def product_view(request):
     return render(request, 'suppliers/index.html', {'products': supplier_products})
 
 def add_product_view(request):
-    return render(request, 'suppliers/add_product.html')
+    return render(request,)
