@@ -20,7 +20,7 @@
         <div class="box-element product ">
             <h6><strong>{{product.product.name}}</strong></h6>
             <hr>
-            <button class="btn btn-outline-secondary add-btn ">Add to Cart</button>
+            <button class="btn btn-outline-secondary add-btn update-cart" data-product={{product.id}} data-action="add">Add to Cart</button>
             <a class="btn btn-outline-success " href="{% url 'products:details' pk=product.id %}">View</a>
             <h4 style="display: inline-block; float:right;">Ksh:{{product.product.price|floatformat:2}}</h4>
         </div>
