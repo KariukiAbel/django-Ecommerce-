@@ -13,7 +13,7 @@
     <script>
     var user = '{{request.user}}'
 
-    function getCookie(name){
+    function getToken(name){
 var cookieValue = null;
 if(document.cookie && document.cookie !== ""){
     var cookies = document.cookie.split(';')
@@ -28,7 +28,7 @@ if(document.cookie && document.cookie !== ""){
 }
 return cookieValue;
     }
-    var csrftoken = getCookie('csrftoken');
+    var csrftoken = getToken('csrftoken');
     </script>
     
     <title></title>
