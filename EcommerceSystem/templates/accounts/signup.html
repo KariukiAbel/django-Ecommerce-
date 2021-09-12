@@ -14,10 +14,11 @@
 </head>
 
 <body>
+<br><br><br>
     <div class="container-fluid">
-        {%if request.user.is_authenticated%}
+        {% comment %} {%if request.user.is_authenticated%}
         <h1>i am signed in</h1>
-        {%endif%}
+        {%endif%} {% endcomment %}
         <div class="row">
             <div class="error"></div>
             <div class="col-sm-2"></div>
@@ -79,7 +80,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-outline-default">Register</button>
+                    <button class="btn btn-lg btn-block btn-outline-dark">Register</button>
                 </form>
             </div>
             <div class="col-sm-2"></div>

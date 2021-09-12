@@ -7,5 +7,5 @@ def product_view(request):
     supplier_products = Product.objects.all()
     return render(request, 'suppliers/index.html', {'products': supplier_products})
 
-def add_product_view(request):
-    return render(request,)
+# def add_product_view(request):
+#     return render(request,)
