@@ -16,7 +16,8 @@
 <div class="row ">
     {% for product in products %}
     <div class="col-md-4 ">
-        <img class="thumbnail " src="{{product.image.url}} " width="100%" height="36%" alt="{{product.image.url}} ">
+    {{product.product_description.image.url}}
+        <img class="thumbnail " src="{{product.product_decription.image.url}} " width="100%" height="36%" alt="{{product.image.url}} ">
         <div class="box-element product ">
             <h6><strong>{{product.name}}</strong></h6>
             <hr>
